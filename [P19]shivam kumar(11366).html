@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Drawing</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="400" height="300" style="border:1px solid black;"></canvas>
+
+<script>
+let canvas = document.getElementById("myCanvas");
+let ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "lightblue";
+ctx.fillRect(20, 20, 120, 80);
+
+ctx.beginPath();
+ctx.arc(250, 70, 40, 0, 2 * Math.PI);
+ctx.fillStyle = "orange";
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(150, 200);
+ctx.lineTo(300, 200);
+ctx.lineTo(225, 140);
+ctx.closePath();
+ctx.fillStyle = "green";
+ctx.fill();
+</script>
+
+</body>
+</html>

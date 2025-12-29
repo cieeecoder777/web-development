@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions and Scope</title>
+</head>
+<body>
+    <h2>JavaScript User Defined Functions & Scope</h2>
+
+    <p id="output"></p>
+
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        var x = 10;
+
+        function varScope() {
+            var x = 20;
+            return x;
+        }
+
+        let y = 30;
+
+        function letScope() {
+            let y = 40;
+            return y;
+        }
+
+        const z = 50;
+
+        function constScope() {
+            return z;
+        }
+
+        let result = "";
+        result += "Addition: " + add(5, 3) + "<br>";
+        result += "Multiplication: " + multiply(4, 6) + "<br>";
+        result += "Global var x: " + x + "<br>";
+        result += "Local var x: " + varScope() + "<br>";
+        result += "Global let y: " + y + "<br>";
+        result += "Local let y: " + letScope() + "<br>";
+        result += "Const z: " + constScope();
+
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+</html>

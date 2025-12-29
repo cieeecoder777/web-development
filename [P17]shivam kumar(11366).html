@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Demo</title>
+</head>
+<body>
+
+<h2 id="text">Press any key or click the button</h2>
+
+<button id="btn">Click Me</button>
+<button onclick="stopEvents()">Remove Events</button>
+
+<script>
+let btn = document.getElementById("btn");
+let text = document.getElementById("text");
+
+function showClick() {
+    text.innerHTML = "Button Clicked";
+}
+
+function showKey(e) {
+    text.innerHTML = "Key Pressed: " + e.key;
+}
+
+btn.addEventListener("click", showClick);
+document.addEventListener("keydown", showKey);
+
+function stopEvents() {
+    btn.removeEventListener("click", showClick);
+    document.removeEventListener("keydown", showKey);
+    text.innerHTML = "Event Listeners Removed";
+}
+</script>
+
+</body>
+</html>

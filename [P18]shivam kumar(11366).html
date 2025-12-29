@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create and Manipulate Elements</title>
+</head>
+<body>
+
+<h2>Element Manipulation</h2>
+
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Item</button>
+<button onclick="changeItem()">Modify Item</button>
+
+<ul id="list">
+    <li>Item 1</li>
+</ul>
+
+<script>
+function addItem() {
+    let li = document.createElement("li");
+    li.innerHTML = "New Item";
+    document.getElementById("list").appendChild(li);
+}
+
+function removeItem() {
+    let list = document.getElementById("list");
+    if (list.lastElementChild) {
+        list.removeChild(list.lastElementChild);
+    }
+}
+
+function changeItem() {
+    let list = document.getElementById("list");
+    if (list.firstElementChild) {
+        list.firstElementChild.innerHTML = "Item Modified";
+    }
+}
+</script>
+
+</body>
+</html>

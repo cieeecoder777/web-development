@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Conditional and Looping</title>
+</head>
+<body>
+
+<h2>JavaScript Conditional and Looping</h2>
+
+<button onclick="condition()">Conditional</button>
+<button onclick="forLoop()">For Loop</button>
+<button onclick="whileLoop()">While Loop</button>
+<button onclick="doWhileLoop()">Do While Loop</button>
+
+<p id="output"></p>
+
+<script>
+function condition() {
+    let n = 5;
+    if (n > 0) {
+        document.getElementById("output").innerHTML = "Number is Positive";
+    } else {
+        document.getElementById("output").innerHTML = "Number is Not Positive";
+    }
+}
+
+function forLoop() {
+    let t = "";
+    for (let i = 1; i <= 5; i++) {
+        t = t + i + " ";
+    }
+    document.getElementById("output").innerHTML = t;
+}
+
+function whileLoop() {
+    let i = 1;
+    let t = "";
+    while (i <= 5) {
+        t = t + i + " ";
+        i++;
+    }
+    document.getElementById("output").innerHTML = t;
+}
+
+function doWhileLoop() {
+    let i = 1;
+    let t = "";
+    do {
+        t = t + i + " ";
+        i++;
+    } while (i <= 5);
+    document.getElementById("output").innerHTML = t;
+}
+</script>
+
+</body>
+</html>
