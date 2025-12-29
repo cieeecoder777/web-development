@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline, Internal & External CSS Example</title>
+     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial;
+        }
+           h1 {
+            color: darkblue;
+            text-align: center;
+        }
+         p {
+            color: green;
+            font-size: 18px;
+        }
+         .internal-box {
+            background-color: lightgreen;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+     <h1 style="color: red; text-shadow: 5px 5px 5px gray;">
+        Example of Inline, Internal & External CSS
+    </h1>
+    <p>This paragraph is styled by <b>internal CSS</b>.</p>
+     <div class="internal-box">
+        <p>The box uses <b>internal CSS</b> class.</p>
+        <p>You have now seen all <b>3 ways</b> to add CSS!</p>
+    </div>
+</body>
+</html>
